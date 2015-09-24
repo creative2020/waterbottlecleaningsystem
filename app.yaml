@@ -1,0 +1,14 @@
+application: water-bottle-cleaning-system
+version: 1
+runtime: php55
+api_version: 1
+
+handlers:
+- url: /
+  static_files: index.html
+  upload: index.html
+
+# Static files.
+- url: /(.*\.(html|css|gif|png|jpg))$
+  static_files: \1
+  upload: .*\.(html|css|gif|png|jpg)$
